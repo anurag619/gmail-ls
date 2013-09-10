@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 """download unread emails"""
 
 import requests
@@ -14,9 +15,11 @@ def main():
 	soup = BeautifulSoup(xml)
 	print "the email with their subjects are:/n /n" 
 	for sub in  soup.find_all('title'): 
-	 print sub.text
+		print sub.text
 	if (sub.text)=="Unauthorized":
-	 print "wrong user-id or password, Please run the script again."
+		print "wrong user-id or password, Please run the script again."
  
 if __name__=='__main__':
- main()
+	main()
+
+
