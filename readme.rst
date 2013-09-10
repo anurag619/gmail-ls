@@ -1,10 +1,16 @@
 
 
-Script to access unread mails from gmail account
-------------------------------------------------
+access unread mails from gmail 
+===============================
 
-this script downloads the unread emails (gmail) into your terminal.
+This script downloads the unread emails (gmail) into your terminal.
+
+How to use:
+------------
+
+::
+
+   $python gmail.py
 
 Type your credentials and you will be done.
-
 
