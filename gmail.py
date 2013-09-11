@@ -9,16 +9,17 @@ from bs4 import BeautifulSoup
 def main():
 	import getpass
 	user = raw_input('gmail Username: ')
-	passwd = getpass.getpass('gmail Password: ')
-	r = requests.get('https://mail.google.com/mail/feed/atom', auth=HTTPBasicAuth(user, passwd))
+	passwd = getpass.getpass('gmail Password:')
+	url = 'https://mail.google.com/mail/feed/atom/login'
+	r = requests.get(url, auth=HTTPBasicAuth(user, passwd) )
 	xml = r.text
-	soup = BeautifulSoup(xml)
-	print "the email with their subjects are:/n /n" 
+	soup = BeautifulSoup(xml) 
 	for sub in  soup.find_all('title'): 
-		print sub.text
+		print "\n" + sub.text +"\n"
 	if (sub.text)=="Unauthorized":
-		print "wrong user-id or password, Please run the script again."
- 
+		print "wrong user-id or password, Please run the script again.\n"
+	
+
 if __name__=='__main__':
 	main()
 
