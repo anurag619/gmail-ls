@@ -10,7 +10,7 @@ def main():
 	import getpass
 	user = raw_input('gmail Username: ')
 	passwd = getpass.getpass('gmail Password:')
-	url = 'https://mail.google.com/mail/feed/atom/login'
+	url = 'https://mail.google.com/mail/feed/atom'
 	r = requests.get(url, auth=HTTPBasicAuth(user, passwd) )
 	xml = r.text
 	soup = BeautifulSoup(xml) 
