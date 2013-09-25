@@ -1,9 +1,8 @@
 
-
 access unread mails from gmail 
 ===============================
 
-This script downloads the unread emails (gmail) into your terminal.
+This script downloads the topic of unread emails (gmail) into your terminal.
 
 How to use:
 ------------
