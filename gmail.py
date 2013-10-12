@@ -10,6 +10,7 @@ def main():
 	import getpass
 	user = raw_input('gmail Username: ')
 	passwd = getpass.getpass('gmail Password:')
+        print "reading the latest mail titles, please be a little patient..."
 	url = 'https://mail.google.com/mail/feed/atom'
 	r = requests.get(url, auth=HTTPBasicAuth(user, passwd) )
 	xml = r.text
